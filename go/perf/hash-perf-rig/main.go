@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/codahale/blake2"
+	"golang.org/x/crypto/blake2b"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/kch42/buzhash"
 )
@@ -42,7 +42,12 @@ func main() {
 	} else if *useSHA == "512" {
 		h = sha512.New()
 	} else if *useSHA == "blake" {
-		h = blake2.NewBlake2B()
+		hashFunc, err := blake2b.New512(nil)
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		h = hashFunc
 	}
 
 	for {

@@ -100,7 +100,8 @@ func run(mux *http.ServeMux, port int, browser bool, spStr string) int {
 		// To develop JS, uncomment this line and run `yarn start`:
 		//http.ServeFile(w, r, "splore/out.js")
 		// To build noms-splore. uncomment this line and run `yarn buildgo`:
-		fmt.Fprint(w, outJs)
+		//lint:ignore SA5009 Suppressing possible Printf formatting directive warning
+		fmt.Fprintf(w, "%s", outJs)
 	})
 
 	mux.HandleFunc("/getNode", func(w http.ResponseWriter, r *http.Request) {

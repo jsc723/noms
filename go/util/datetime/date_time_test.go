@@ -5,6 +5,7 @@
 package datetime
 
 import (
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -68,7 +69,7 @@ func TestUnmarshalInvalid(t *testing.T) {
 	test(types.Number(42))
 	test(types.NewStruct("DateTime", types.StructData{}))
 	test(types.NewStruct("DateTime", types.StructData{
-		"secSinceEpoch": types.String(42),
+		"secSinceEpoch": types.String(strconv.Itoa(42)),
 	}))
 	test(types.NewStruct("DateTime", types.StructData{
 		"SecSinceEpoch": types.Number(42),

@@ -47,7 +47,7 @@ func main() {
 	noProgress := app.Flag("no-progress", "prevents progress from being output if true").Bool()
 	destType := app.Flag("dest-type", "the destination type to import to. can be 'list' or 'map:<pk>', where <pk> is a list of comma-delimited column headers or indexes (0-based) used to uniquely identify a row").Default("list").String()
 	skipRecords := app.Flag("skip-records", "number of records to skip at beginning of file").Uint()
-	limit := app.Flag("limit-records", "maximum number of records to process").Default(fmt.Sprintf("%d", math.MaxUint32)).Uint64()
+	limit := app.Flag("limit-records", "maximum number of records to process").Default(fmt.Sprintf("%d", +uint64(math.MaxUint32))).Uint64()
 	performCommit := app.Flag("commit", "commit the data to head of the dataset (otherwise only write the data to the dataset)").Default("true").Bool()
 	appendFlag := app.Flag("append", "append new data to list at head of specified dataset.").Bool()
 	invert := app.Flag("invert", "import rows in column major format rather than row major").Bool()

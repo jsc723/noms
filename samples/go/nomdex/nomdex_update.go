@@ -94,9 +94,9 @@ type StreamingSetEntry struct {
 type IndexMap map[types.Value]StreamingSetEntry
 
 type Index struct {
-	m          IndexMap
 	indexedCnt int64
 	seenCnt    int64
+	m          IndexMap
 	mutex      sync.Mutex
 }
 

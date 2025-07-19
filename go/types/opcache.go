@@ -104,16 +104,17 @@ type opCacheIterator interface {
 }
 
 type ldbOpCacheStore struct {
+	collectionId uint32
 	ldb          *leveldb.DB
 	dbDir        string
-	collectionId uint32
 	vrw          ValueReadWriter
 }
 
 type ldbOpCache struct {
-	vrw     ValueReadWriter
 	colId   uint32
+	padding uint32
 	listIdx int64
+	vrw     ValueReadWriter
 	ldb     *leveldb.DB
 }
 

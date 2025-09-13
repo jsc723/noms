@@ -21,6 +21,7 @@ import (
 
 var kingpinCommands = []util.KingpinCommand{
 	nomsBlob,
+	nomsCmd,
 	nomsCommit,
 	nomsConfig,
 	nomsDiff,

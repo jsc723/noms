@@ -1,12 +1,12 @@
 # Prerequisites
 
-* [Go 1.13 or later](https://golang.org/dl/)
+* [Go 1.24 or later](https://golang.org/dl/)
 * Mac or Linux (Noms isn't currently supported on Windows)
 
 # Get
 
 ```
-git clone https://github.com/attic-labs/noms
+git clone https://github.com/jsc723/noms
 ```
 
 # Build

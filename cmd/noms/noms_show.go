@@ -34,7 +34,7 @@ func nomsShow(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandle
 
 		if value == nil {
 			fmt.Fprintf(os.Stderr, "Value not found: %s\n", *path)
-			return 0
+			return 0 
 		}
 
 		if *showRaw && *showStats {

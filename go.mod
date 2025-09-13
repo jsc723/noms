@@ -10,6 +10,7 @@ require (
 	github.com/attic-labs/graphql v0.0.0-20190507195614-b6552d20145f
 	github.com/attic-labs/kingpin v2.2.7-0.20180312050558-442efcfac769+incompatible
 	github.com/aws/aws-sdk-go v1.19.26
+	github.com/chzyer/readline v1.5.1
 	github.com/clbanning/mxj v1.8.4
 	github.com/dustin/go-humanize v1.0.0
 	github.com/golang/snappy v0.0.1
